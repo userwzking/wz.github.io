@@ -1,127 +1,882 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8 " />
-<title>王振快捷网站</title><style type="text/css">
-#p {
-	background-color: #3F0;
-	  
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小振很努力的常用网址</title>
+    
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6C5CE7;
+            --secondary-color: #FF7675;
+            --bg-gradient: linear-gradient(135deg, #6C5CE7, #FF9FF3);
+            --card-hover: rgba(255, 255, 255, 0.05);
+            --text-color: #FFFFFF;
+            --font-family: 'Segoe UI', 'Noto Sans SC', sans-serif;
+        }
 
-#w1 {background-color: yellow;}
-.w2 {background-color:prink;padding-right:30px;
-padding-bottom:30px;padding-top:30px;
-padding-left:30px;
+        * {
+            box-sizing: border-box;
+            font-family: var(--font-family);
+        }
 
-}
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
 
-.w3 {background-color:#0F0}
-.w4 {width:300px;
-    height: 200px;
-     border:10px solid red;     
-	 padding:2px; 
-	 margin:10px;
-	 float:left;
-	 font-size:50px;
-	 }
-.w5 {float；left;}
-.w6{width:800;}
-#w7{clear:left}
-#w8{padding:10px;
-     font-size:100px;
-	border:4px solid #000;
-	 border-top:5px red dashed;
-	 
-}
-li {
-	float: left;
-	margin-right: 10px;
-	margin-left: 10px;
-	padding-right: 10px;
-	padding-left: 10px;
-	
-}
+        .hamburger-menu {
+            position: fixed;
+            right: 20px;
+            top: 15px;
+            font-size: 1.8rem;
+            z-index: 1001;
+            color: white;
+            cursor: pointer;
+            background: rgba(0,0,0,0.3);
+            padding: 0.5rem;
+            border-radius: 8px;
+            display: none;
+        }
 
-</style>
-</head>
+        .directory {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(20, 20, 20, 0.95);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0.5rem 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+            transition: background 0.3s;
+        }
 
-<body class='w3' >
+        .directory a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0.5rem 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
 
-<div class=" w5" >
-<form>
-用户名<input type="text" name="username" placeholder="手机、邮箱"/><br />密码<input type="password" name="password"placeholder="请输入6--16位密码"><br /><input type="submit" value="登录"><br /><input type="reset" value="清空"><br /><input type="button" value="去注册"
+        .directory a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
 
+        .directory a i {
+            margin-right: 10px;
+        }
 
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            margin: 2rem auto;
+            padding: 2rem 3rem;
+            max-width: 1400px;
+            width: 90%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            animation: fadeInUp 1.2s ease-out;
+            flex: 1;
+            overflow-y: auto;
+        }
 
-</form>
-</div>
-<div>
-<div>
-<h1>目录</h1>
-<ol>
-<li>去学习</li>
-<li>去学校官网</li>
-<li>象棋</li>
-<li>去扇贝</li>
-<li>去哔哩哔哩</li>
-<li>去百度</li>
-<li>剪辑软件下载</li>
-<li>去看英语</li>
-<li>网络系统建设与运维</li>
-<li>去看电影</li>
-<li>学习access</li>
-<li>泽众成学</li>
-</ol>
-</div>
-<div id="w7"></div>
-</div>
-<div class="w6">
-<div class="w4" >
-<p style="background-color:silver" ><a href="http://e-learning.51cto.com"  target="_blank">去学习</a> 
-</p>
-</div>
-<div class="w4">
-<p id='w1'><a href="http://10.110.84.24" target="_blank">去学校官网</a></p>
-</div>
-<div class="w4">
-<p ><a href="https://www.4399.com/flash/119558_4.htm" style="background-color:cyan"  target="_blank">象棋</a></p>
-</div>
-<div class=" w4 "><p><a href="https://web.shanbay.com/web/main/index" style="background-color:orange" target="_blank">去扇贝</a></p></div>
-<div class="w4">
-<p><a href="https://www.bilibili.com/video/BV1NA411v7fz/?spm_id_from=333.337.search-card.all.click" style="background-color:violet"  target="_blank">去哔哩哔哩</a></p></div>
-<div class="w4">
-<p style="background-color:red"><a href="http:/www.baidu.com" target="_blank">去百度</a></p>
-</div>
-<div class="w4" >
-<p ><a href="https://www.yuque.com/docs/share/3074e3c8-1310-4a1e-8f0d-5c12c658f6ea" target="_blank">剪辑软件下载</a></p>
-</div>
-<div class="w4" >
-<p><a href="https://www.bilibili.com/video/BV13g411F7Kd/?spm_id_from=333.337.search-card.all.click&amp;vd_source=181b1253491594c7aa7451cb7844c462" target="_blank">去看英语</a></p>
-</div>
-<div class="w4">
-<p ><a href=<p ><a href="https://www.zxxk.com/" target="_blank">学科网</a></p>
-</div>
-</div>
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+        }
 
-<div class="w4">
-<p id='w1'><a href="https://search.bilibili.com/all?vt=13347932&keyword=%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F%E5%BB%BA%E8%AE%BE%E4%B8%8E%E8%BF%90%E7%BB%B4&from_source=webtop_search&spm_id_from=333.1007&search_source=2" target="_blank">网络系统建设与运维</a></p>
-</div>
-<div class="w4">
-<p ><a href=<p ><a href="https://jiukanju.com/" target="_blank">看电影</a></p>
-</div>
-<div class="w4">
-<p ><a href=<p ><a href="https://www.bilibili.com/video/BV1k8411V7Yy/?p=3&spm_id_from=pageDriver&vd_source=181b1253491594c7aa7451cb7844c462" target="_blank">学习access</a></p>
-</div>
-<div class="w4">
-<p ><a href=<p ><a href="https://zjfct.xetlk.com/s/2kZGw7" target="_blank">泽众成学</a></p>
-</div>
-<div id="w7">
-</div>
-<div>
-<div style='background:red;width:100px;height:100px;padding:100px;margin:500px;'>
-测试
-</div>
-</div>
+        h1 {
+            font-size: 3.5rem;
+            color: #00FF7F;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color:#ADD8E6;
+        }
+
+        .link-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            background: var(--card-hover);
+        }
+
+        .link-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            transition: transform 0.4s ease;
+        }
+
+        .link-card:hover i {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .link-card.new-road { background: linear-gradient(135deg, #74ebd5, #ACB6E5); }
+        .link-card.cet { background: linear-gradient(135deg, #4bc0c8, #cadcfe); }
+        .link-card.ai { background: linear-gradient(135deg, #00c9ff, #92fe9d); }
+        .link-card.entertainment { background: linear-gradient(135deg, #f6d365, #fda085); }
+        .link-card.network { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+        .link-card.video { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+        .link-card.learning { background: linear-gradient(135deg, #c3cfe2, #c3cfe2); }
+        .link-card.tools { background: linear-gradient(135deg, #e2c4c4, #a6dcef); }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+            }
+            
+            .directory {
+                flex-direction: column;
+                align-items: flex-start;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            .directory.active {
+                max-height: 500px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                margin: 1rem auto;
+                padding: 1.5rem;
+            }
+        }
+        .sticky-bottom {
+            position: sticky;
+            bottom: 0.5rem;
+            /* bottom-2 */
+            z-index: 30;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            transform: translateY(25px);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        /* 视频播放悬浮按钮，仅影响该按钮 */
+        .video-fab {
+            position: fixed;
+            right: 20px;
+            bottom: 24px;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #ffffff;
+            background: radial-gradient(120% 120% at 30% 30%, #6C5CE7 0%, #A78BFA 40%, #FF9FF3 100%);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.15);
+            text-decoration: none;
+            z-index: 1100;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+            backdrop-filter: blur(6px);
+        }
+        .video-fab:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.28), 0 0 16px rgba(167,139,250,0.45);
+            filter: saturate(1.15);
+        }
+        .video-fab:active {
+            transform: scale(0.98);
+        }
+        .video-fab i {
+            font-size: 1.25rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+        }
+    </style>
+<style>
+            .music-player-trigger {
+                position: fixed;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(31, 41, 55, 0.95);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-left: none;
+                border-radius: 0 10px 10px 0;
+                padding: 15px 8px;
+                z-index: 1000;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+            }
+            .music-player-trigger:hover {
+                background: rgba(55, 65, 81, 0.95);
+                transform: translateY(-50%) scale(1.05);
+            }
+            .music-player-trigger i {
+                color: #a78bfa; /* Changed color */
+                font-size: 1.5rem;
+                text-shadow: 0 0 8px rgba(139, 92, 246, 0.5); /* Adjusted shadow color */
+            }
+            .music-player-popup {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 350px;
+                height: 100%;
+                background: rgba(30, 30, 30, 0.9);
+                backdrop-filter: blur(15px);
+                border-right: 1px solid rgba(255, 255, 255, 0.1);
+                z-index: 1001;
+                transform: translateX(-100%);
+                transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                display: flex;
+                flex-direction: column;
+                box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
+            }
+            .music-player-popup.open {
+                transform: translateX(0);
+            }
+            .player-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                background: rgba(31, 41, 55, 0.7);
+            }
+            .player-header h3 {
+                margin: 0;
+                color: #e5e7eb;
+                font-size: 1.3rem;
+                font-weight: 600;
+                background: linear-gradient(to right, #a78bfa, #8b5cf6); /* Changed gradient */
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .close-btn {
+                background: none;
+                border: none;
+                color: #9ca3af;
+                font-size: 1.3rem;
+                cursor: pointer;
+                padding: 5px;
+                border-radius: 50%;
+                transition: all 0.2s ease;
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .close-btn:hover {
+                color: #a78bfa; /* Changed color */
+                background: rgba(255, 255, 255, 0.1);
+                transform: rotate(90deg);
+            }
+            .player-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+                padding: 25px;
+                flex: 1;
+                overflow-y: auto;
+            }
+            .album-art {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: radial-gradient(circle at center, #1f2937, #111827);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                position: relative;
+                overflow: hidden;
+                transition: transform 0.5s ease; /* Added transition for pulse */
+            }
+            .album-art::before {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background: #a78bfa; /* Changed color */
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 10px #a78bfa; /* Adjusted shadow color */
+            }
+            .album-art i {
+                font-size: 6rem;
+                color: #9ca3af;
+                animation: rotate 20s linear infinite;
+                animation-play-state: paused;
+                text-shadow: 0 0 10px rgba(139, 92, 246, 0.3); /* Adjusted shadow color */
+            }
+            .music-player-popup.playing .album-art i {
+                animation-play-state: running;
+            }
+            .music-player-popup.playing .album-art {
+                 animation: pulse 4s ease-in-out infinite alternate; /* Added pulse animation */
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes pulse { /* Added pulse animation */
+                0% {
+                    transform: scale(1);
+                }
+                100% {
+                    transform: scale(1.03);
+                }
+            }
+
+            .track-info {
+                text-align: center;
+                max-width: 100%;
+                overflow: hidden;
+                width: 100%;
+            }
+            .track-title {
+                font-weight: 600;
+                color: #e5e7eb;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+                font-size: 1.3rem;
+                margin-bottom: 8px;
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+            }
+            .track-artist {
+                font-size: 1.1rem;
+                color: #9ca3af;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+            }
+            .progress-container {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                width: 100%;
+            }
+            .current-time, .duration {
+                font-size: 0.9rem;
+                color: #9ca3af;
+                min-width: 40px;
+                font-family: 'JetBrains Mono', monospace;
+            }
+            .progress-bar {
+                flex: 1;
+                height: 6px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 3px;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+            }
+            .progress-bar::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1));
+                animation: progressGlow 2s infinite alternate;
+            }
+            @keyframes progressGlow {
+                from {
+                    opacity: 0.3;
+                }
+                to {
+                    opacity: 0.7;
+                }
+            }
+            .progress {
+                height: 100%;
+                background: linear-gradient(to right, #8b5cf6, #a78bfa); /* Changed gradient */
+                border-radius: 3px;
+                width: 0%;
+                position: relative;
+                box-shadow: 0 0 10px rgba(139, 92, 246, 0.5); /* Adjusted shadow color */
+            }
+            .progress::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3));
+                border-radius: 3px;
+            }
+            .player-controls {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                width: 100%;
+                margin-top: 10px;
+                padding: 15px 0;
+            }
+            .control-btn {
+                background: none;
+                border: none;
+                color: #d1d5db;
+                font-size: 1.1rem;
+                cursor: pointer;
+                padding: 12px;
+                border-radius: 50%;
+                transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                position: relative;
+                overflow: hidden;
+            }
+            .control-btn::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(139, 92, 246, 0.1); /* Adjusted background color */
+                border-radius: 50%;
+                transform: scale(0);
+                transition: transform 0.3s ease;
+                z-index: -1;
+            }
+            .control-btn:hover {
+                color: #a78bfa; /* Changed color */
+                transform: scale(1.1);
+            }
+            .control-btn:hover::before {
+                transform: scale(1);
+            }
+            .control-btn:active {
+                transform: scale(0.95);
+            }
+            .play-pause-btn {
+                width: 65px; /* Slightly increased size */
+                height: 65px; /* Slightly increased size */
+                font-size: 2rem; /* Increased icon size */
+                background: rgba(255, 255, 255, 0.05) !important;
+                border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            }
+            .play-pause-btn::before {
+                background: rgba(139, 92, 246, 0.2); /* Adjusted background color */
+            }
+            .shuffle-btn.active {
+                color: #a78bfa; /* Changed color */
+                text-shadow: 0 0 8px rgba(139, 92, 246, 0.7); /* Adjusted shadow color */
+            }
+            .volume-btn { /* Added style for volume button */
+                 color: #d1d5db; /* Default color */
+            }
+            .volume-btn.muted {
+                color: #ef4444; /* Muted color remains red */
+            }
+            .volume-btn:hover { /* Added hover effect for volume button */
+                 color: #a78bfa; /* Hover color */
+            }
+        </style></head>
+<body>
+    <div class="hamburger-menu" id="hamburger">☰</div>
+    
+    <div class="directory" id="directory">
+        <a href="#new-road"><i class="fas fa-road"></i> 新路</a>
+        <a href="#cet"><i class="fas fa-graduation-cap"></i> 考证</a>
+        <a href="#ai"><i class="fas fa-robot"></i> 在线AI</a>
+        <a href="#entertainment"><i class="fas fa-film"></i> 娱乐</a>
+        <a href="#network"><i class="fas fa-network-wired"></i> 网络知识平台</a>
+        <a href="#video"><i class="fas fa-video"></i> 视频平台</a>
+        <a href="#learning"><i class="fas fa-book"></i> 学习平台</a>
+        <a href="#tools"><i class="fas fa-tools"></i> 工具</a>
+        
+
+    </div>
+
+    <div class="container" id="main-container">
+        <h1>小振很努力的常用网址快捷网址首页</h1>
+        
+        <!-- 新路 -->
+        <section id="new-road">
+            <h2>新路</h2>
+            <div class="link-container">
+                <div class="link-card new-road" onclick="window.open('https://www.mubu.com/doc/BM_oE-x3Q2', '_blank')">
+                    <i class="fas fa-school"></i>
+                    <p>各类学校情况</p>
+                </div>
+                <div class="link-card new-road" onclick="window.open('https://wiki.nroad.com.cn/', '_blank')">
+                    <i class="fas fa-wikipedia-w"></i>
+                    <p>Wiki</p>
+                </div>
+                <div class="link-card new-road" onclick="window.open('http://1.85.6.2:8100/', '_blank')">
+                    <i class="fas fa-wikipedia-w"></i>
+                    <p>maxkb</p>
+                </div>
+                <div class="link-card new-road" onclick="window.open('https://web.soc.pro.wenet.group/', '_blank')">
+                    <i class="fas fa-cogs"></i>
+                    <p>SOC</p>
+                </div>
+                <div class="link-card new-road" onclick="window.open('https://bas.wenet.com.cn/', '_blank')">
+                    <i class="fas fa-cogs"></i>
+                    <p>BAS</p>
+                </div>
+                <div class="link-card new-road" onclick="window.open('https://platform.wenet.com.cn/', '_blank')">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>商城</p>
+                </div>
+                <div class="link-card new-road" onclick="window.open('http://ykf.7moor.com/', '_blank')">
+                    <i class="fas fa-headset"></i>
+                    <p>云客服</p>
+                </div>
+                <div class="link-card new-road" onclick="window.open('https://userwzking.github.io/wz.html', '_blank')">
+                    <i class="fas fa-cogs"></i>
+                    <p>wz</p>
+                </div>
+                <div class="link-card new-road">
+                    <a style="color:#FFFFFF" href="wz.html"><i class="fa-sharp fa-regular fa-folder-open"></i><p> 快捷网页</p></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 考证 -->
+        <section id="cet">
+            <h2>考证</h2>
+            <div class="link-container">
+                <div class="link-card cet" onclick="window.open('https://cet-bm.neea.edu.cn/', '_blank')">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>四六级官网</p>
+                </div>
+                <div class="link-card cet" onclick="window.open('https://zhenti.burningvocabulary.cn/cet4', '_blank')">
+                    <i class="fas fa-book"></i>
+                    <p>四级真题</p>
+                </div>
+                <div class="link-card cet" onclick="window.open('https://ncre.neea.edu.cn/', '_blank')">
+                    <i class="fas fa-laptop-code"></i>
+                    <p>计算机等级</p>
+                </div>
+                <div class="link-card cet" onclick="window.open('https://www.sneac.com/', '_blank')">
+                    <i class="fas fa-book"></i>
+                    <p>陕西省招生考试信息网</p>
+                </div>
+                <div class="link-card cet" onclick="window.open('https://bm.ruankao.org.cn/', '_blank')">
+                    <i class="fa-solid fa-book"></i>
+                    <p>软考报名</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 在线AI -->
+        <section id="ai">
+            <h2>在线AI</h2>
+            <div class="link-container">
+                <div class="link-card ai" onclick="window.open('https://openai.com/index/morgan-stanley/', '_blank')">
+                    <i class="fab fa-robot"></i>
+                    <p>国外OpenAI</p>
+                </div>
+                <div class="link-card ai" onclick="window.open('https://kelaode.ai/', '_blank')">
+                    <i class="fab fa-robot"></i>
+                    <p>RawChat</p>
+                </div>
+                <div class="link-card ai" onclick="window.open('https://www.doubao.com/chat/', '_blank')">
+                    <i class="fab fa-robot"></i>
+                    <p>豆包</p>
+                </div>
+                <div class="link-card ai" onclick="window.open('https://tongyi.aliyun.com/', '_blank')">
+                    <i class="fab fa-robot"></i>
+                    <p>通义千问</p>
+                </div>
+                <div class="link-card ai" onclick="window.open('https://chat.shared-hub.com/', '_blank')">
+                    <i class="fab fa-robot"></i>
+                    <p>国内Chat</p>
+                </div>
+                <div class="link-card ai" onclick="window.open('https://kimi.moonshot.cn/', '_blank')">
+                    <i class="fab fa-robot"></i>
+                    <p>Kimi</p>
+                </div>
+                <div class="link-card ai" onclick="window.open('https://xinghuo.xfyun.cn/', '_blank')">
+                    <i class="fab fa-robot"></i>
+                    <p>讯飞星火</p>
+                </div>
+                <div class="link-card ai" onclick="window.open('https://chat.qwen.ai/', '_blank')">
+                    <i class="fab fa-robot"></i>
+                    <p>千问</p>
+                </div>
+                <div class="link-card ai" onclick="window.open('https://chat.deepseek.com//', '_blank')">
+                    <i class="fab fa-robot"></i>
+                    <p>deepseek</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 娱乐 -->
+        <section id="entertainment">
+            <h2>娱乐</h2>
+            <div class="link-container">
+                <div class="link-card entertainment" onclick="window.open('https://weibo.com/', '_blank')">
+                    <i class="fab fa-weibo"></i>
+                    <p>微博</p>
+                </div>
+                <div class="link-card entertainment" onclick="window.open('https://www.4399.com/', '_blank')">
+                    <i class="fas fa-gamepad"></i>
+                    <p>4399</p>
+                </div>
+                <div class="link-card entertainment" onclick="window.open('https://www.zhihu.com/', '_blank')">
+                    <i class="fab fa-zhihu"></i>
+                    <p>知乎</p>
+                </div>
+                <div class="link-card entertainment" onclick="window.open('https://v.qq.com/', '_blank')">
+                    <i class="fab fa-qq"></i>
+                    <p>腾讯视频</p>
+                </div>
+                <div class="link-card entertainment" onclick="window.open('https://www.kugou.com/', '_blank')">
+                    <i class="fab fa-kugou"></i>
+                    <p>酷狗</p>
+                </div>
+                <div class="link-card entertainment" onclick="window.open('https://music.163.com/', '_blank')">
+                    <i class="fab fa-spotify"></i>
+                    <p>网易云</p>
+                </div>
+                <div class="link-card entertainment" onclick="window.open('https://www.bilibili.com/', '_blank')">
+                    <i class="fab fa-bilibili"></i>
+                    <p>哔站</p>
+                </div>
+                <div class="link-card entertainment" onclick="window.open('https://www.douyin.com/', '_blank')">
+                    <i class="fab fa-tiktok"></i>
+                    <p>抖音</p>
+                </div>
+                <div class="link-card entertainment" onclick="window.open('https://wz.xzin.top/', '_blank')">
+                    <i class="fab fa-vid"></i>
+                    <p>博客1</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 网络知识平台 -->
+        <section id="network">
+            <h2>网络知识平台</h2>
+            <div class="link-container">
+                <div class="link-card network" onclick="window.open('https://github.com/', '_blank')">
+                    <i class="fab fa-github"></i>
+                    <p>GitHub</p>
+                </div>
+                <div class="link-card network" onclick="window.open('https://www.csdn.net/', '_blank')">
+                    <i class="fab fa-csdn"></i>
+                    <p>CSDN</p>
+                </div>
+                <div class="link-card network" onclick="window.open('https://www.runoob.com/', '_blank')">
+                    <i class="fab fa-html5"></i>
+                    <p>菜鸟教程</p>
+                </div>
+                <div class="link-card network" onclick="window.open('https://www.cnblogs.com/', '_blank')">
+                    <i class="fab fa-blogger"></i>
+                    <p>博客园</p>
+                </div>
+                <div class="link-card network" onclick="window.open('https://comate.baidu.com/zh/chat?mode=AGENT/', '_blank')">
+                    <i class="fab fa-blogger"></i>
+                    <p>文心快码</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 视频平台 -->
+        <section id="video">
+            <h2>视频平台</h2>
+            <div class="link-container">
+                <div class="link-card video" onclick="window.open('https://www.bilibili.com/', '_blank')">
+                    <i class="fab fa-bilibili"></i>
+                    <p>哔站</p>
+                </div>
+                <div class="link-card video" onclick="window.open('https://www.douyin.com/', '_blank')">
+                    <i class="fab fa-tiktok"></i>
+                    <p>抖音</p>
+                </div>
+                <div class="link-card video" onclick="window.open('https://kuaishou.cn/', '_blank')">
+                    <i class="fab fa-vid"></i>
+                    <p>快手</p>
+                </div>             
+            </div>
+        </section>
+
+        <!-- 学习平台 -->
+        <section id="learning">
+            <h2>学习平台</h2>
+            <div class="link-container">
+                <div class="link-card learning" onclick="window.open('https://www.coursera.org/', '_blank')">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>Coursera</p>
+                </div>
+                <div class="link-card learning" onclick="window.open('https://www.edx.org/', '_blank')">
+                    <i class="fas fa-book"></i>
+                    <p>edX</p>
+                </div>
+                <div class="link-card learning" onclick="window.open('https://www.khanacademy.org/', '_blank')">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <p>Khan Academy</p>
+                </div>
+                <div class="link-card learning" onclick="window.open('https://www.udemy.com/', '_blank')">
+                    <i class="fas fa-laptop"></i>
+                    <p>Udemy</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工具 -->
+        <section id="tools">
+            <h2>工具</h2>
+            <div class="link-container">
+                <div class="link-card tools" onclick="window.open('http://192.168.51.200:6806//', '_blank')">
+                    <i class="fas fa-paint-brush"></i>
+                    <p>思源</p>
+                </div>
+                <div class="link-card tools" onclick="window.open('http://192.168.51.200/', '_blank')">
+                    <i class="fas fa-sticky-note"></i>
+                    <p>博客</p>
+                </div>
+                <div class="link-card tools" onclick="window.open('http://192.168.51.200:500//', '_blank')">
+                    <i class="fas fa-palette"></i>
+                    <p>日记本</p>
+                </div>
+                <div class="link-card tools" onclick="window.open('https://www.trello.com/', '_blank')">
+                    <i class="fas fa-tasks"></i>
+                    <p>Trello</p>
+                </div>
+                <div class="link-card tools" onclick="window.open('https://www.qr-code-generator.com/', '_blank')">
+                    <i class="fas fa-tasks"></i>
+                    <p>二维码生成工具</p>
+                </div>
+                <div class="link-card tools" onclick="window.open('https://uutool.cn/', '_blank')">
+                    <i class="fas fa-tasks"></i>
+                    <p>在线小工具</p>
+                </div>
+                <div class="link-card tools" onclick="window.open('https://fontawesome.com/', '_blank')">
+                    <i class="fa-solid fa-image"></i>
+                    <p>小图标</p>
+                </div>
+                <div class="link-card tools" onclick="window.open('https://www.pdfpai.com/', '_blank')">
+                    <i class="fas fa-tasks"></i>
+                    <p>pdf转word</p>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="sticky-bottom">
+        <div class="container-wrapper">
+            <img src="animals.webp" alt="动物装饰" width="660.34" height="79.99" class="animal-image">
+        </div>
+    </div>
+
+    <script>
+        // 响应式菜单逻辑
+        document.addEventListener('DOMContentLoaded', () => {
+            const dir = document.getElementById('directory');
+            const hamburger = document.getElementById('hamburger');
+            
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dir.classList.toggle('active');
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768 && !e.target.closest('.directory') && !e.target.is(hamburger)) {
+                    dir.classList.remove('active');
+                }
+            });
+
+            // 禁用右键菜单
+            document.addEventListener('contextmenu', e => e.preventDefault());
+            
+            // 禁用开发者工具快捷键
+            document.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) || e.key === 'F12') {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+    <script src="music-player.js"></script>
+
+    <!-- 视频播放悬浮按钮：移出导航容器，固定右下角 -->
+    <a class="video-fab" href="vip_analysis.html.html" target="_blank" title="视频播放" aria-label="视频播放">
+        <i class="fas fa-film" aria-hidden="true"></i>
+    </a>
 
 </body>
 </html>
