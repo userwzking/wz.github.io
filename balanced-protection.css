@@ -1,0 +1,101 @@
+/* 平衡的CSS源码保护 - 保护源码但不影响正常使用 */
+
+/* 全局禁用文本选择 - 但允许表单输入 */
+* {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* 允许表单元素正常选择 */
+input, textarea, select, [contenteditable="true"] {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+
+/* 允许按钮和链接的正常交互 */
+button, a, .btn, .button {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    cursor: pointer !important;
+}
+
+/* 打印时隐藏内容 */
+@media print {
+    * {
+        display: none !important;
+    }
+    
+    body::before {
+        content: "源码受保护 - 禁止打印" !important;
+        display: block !important;
+        text-align: center !important;
+        font-size: 24px !important;
+        color: #ff0000 !important;
+        padding: 50px !important;
+    }
+}
+
+/* 文本选择时显示透明 */
+::selection {
+    background: transparent !important;
+    color: inherit !important;
+}
+
+::-moz-selection {
+    background: transparent !important;
+    color: inherit !important;
+}
+
+/* 禁用拖拽 - 但允许必要的拖拽操作 */
+img, a, div {
+    -webkit-user-drag: none !important;
+    -khtml-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -o-user-drag: none !important;
+    user-drag: none !important;
+}
+
+/* 允许表单拖拽 */
+input, textarea, select {
+    -webkit-user-drag: auto !important;
+    -khtml-user-drag: auto !important;
+    -moz-user-drag: auto !important;
+    -o-user-drag: auto !important;
+    user-drag: auto !important;
+}
+
+/* 隐藏源码保护提示 - 默认不显示 */
+body::before {
+    content: "源码受保护";
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 999999;
+    display: none; /* 默认隐藏 */
+}
+
+/* 开发者工具检测时显示提示 */
+body.dev-tools-detected::before {
+    display: block !important;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+    body::before {
+        font-size: 10px;
+        padding: 3px 6px;
+        top: 5px;
+        right: 5px;
+    }
+}
