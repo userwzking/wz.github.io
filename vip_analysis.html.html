@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIP视频解析播放</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+
+    .input-container {
+      display: flex;
+      max-width: 900px;
+      margin: 0 auto 30px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    #video-url {
+      flex: 1;
+      padding: 14px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    #player-select {
+      padding: 14px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      min-width: 180px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    button {
+      padding: 14px 24px;
+      font-size: 16px;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    button:hover {
+      background-color: #ff5252;
+    }
+
+    .player-container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      background-color: #000;
+      aspect-ratio: 16 / 9; /* 响应式 16:9 高宽比 */
+    }
+
+    #player-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .input-container {
+        flex-direction: column;
+      }
+      #player-select, #video-url {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎬 我的视频播放器</h1>
+    <p>选择解析线路，输入链接，畅享播放</p>
+  </header>
+
+  <div class="input-container">
+    <select id="player-select">
+      <option value="https://jx.xmflv.cc/?url=">线路 1 - 虾米解析</option>
+      <option value="https://jx.nnsvip.cn/?url=">线路 2 - 小白狼解析</option>
+      <!-- ✅ 你可以继续添加更多线路 -->
+    </select>
+
+    <input type="text" id="video-url" placeholder="请输入视频页面链接,例如：https://v.qq.com/x/cover/..." value="">
+
+    <button onclick="loadVideo()">播放</button>
+  </div>
+
+  <div class="player-container">
+    <iframe id="player-frame" src="" allowfullscreen="true" allow="autoplay; encrypted-media" scrolling="no" frameborder="0">
+    </iframe>
+  </div>
+
+  <footer>
+    Copyright © 2025 我的视频播放器 - 仅供学习交流 | 如有侵权，联系站长删除或下架
+  </footer>
+
+  <script>
+    function loadVideo() {
+      const urlInput = document.getElementById('video-url').value.trim();
+      const select = document.getElementById('player-select');
+      const selectedPlayer = select.value;
+      const iframe = document.getElementById('player-frame');
+
+      if (!urlInput) {
+        alert("请输入有效的视频链接！");
+        return;
+      }
+
+      // 检查是否以 http 开头，不是则自动补全
+      let finalUrl = urlInput;
+      if (!urlInput.startsWith('http')) {
+        finalUrl = 'https://' + urlInput;
+      }
+
+      // 拼接解析器和视频链接（URL 编码）
+      iframe.src = selectedPlayer + encodeURIComponent(finalUrl);
+    }
+
+    // 支持回车键播放
+    document.getElementById('video-url').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        loadVideo();
+      }
+    });
+
+  </script>
+
+
+</body></html>
